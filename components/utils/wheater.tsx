@@ -2,7 +2,7 @@
 import { WeatherData } from "../../models/wheater.models"
 
 export async function fetchWeatherData(cityName: string): Promise<WeatherData> {
-    const API_KEY = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEYv;
+    const API_KEY = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY;
     if (!API_KEY) {
         throw new Error('API key not found');
     }
