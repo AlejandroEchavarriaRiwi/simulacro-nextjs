@@ -22,7 +22,7 @@ function getCurrentLocation(): Promise<GeolocationPosition> {
 async function getCityName(lat: number, lon: number): Promise<string> {
     const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`);
     const data = await response.json();
-    return data.address.city || data.address.town || data.address.village || 'Ciudad desconocida';
+    return data.name;
 }
 
 export default function WeatherPage() {
