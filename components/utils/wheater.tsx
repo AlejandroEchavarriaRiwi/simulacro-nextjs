@@ -1,4 +1,4 @@
-import { env } from "process";
+
 import { WeatherData } from "../../models/wheater.models"
 
 export async function fetchWeatherData(cityName: string): Promise<WeatherData> {
