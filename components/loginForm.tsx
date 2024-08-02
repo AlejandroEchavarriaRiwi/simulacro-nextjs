@@ -1,26 +1,22 @@
 'use client'
 import { useEffect, useState } from "react";
 import { UserController } from "../controllers/user.controller";
-import Preloader from "./preloader";
-import SuccessAlert from "./alerts/successAlert";
+
 
 export function LoginForm() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
 
     useEffect(() => {
         localStorage.removeItem('token');
     }, []);
-    
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const userController = new UserController('https://reqres.in/');
 
         try {
-            setIsLoading(true);
             const loginResult = await userController.login({ username, password });
             if (loginResult && loginResult.token) {
                 alert('Login succesfully')
@@ -96,7 +92,7 @@ export function LoginForm() {
                                 </button>
                             </div>
                             <p className="text-sm !mt-8 text-center text-gray-800">
-                                Don't have an account <a href="#" onClick={(e) => { e.preventDefault(); window.location.href = '/register'}} className="ml-1 font-semibold text-blue-600 hover:underline whitespace-nowrap">Register here</a>
+                                Don&apos;t have an account <a href="#" onClick={(e) => { e.preventDefault(); window.location.href = '/register' }} className="ml-1 font-semibold text-blue-600 hover:underline whitespace-nowrap">Register here</a>
                             </p>
                         </form>
                     </div>
