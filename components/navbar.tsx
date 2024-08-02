@@ -1,12 +1,13 @@
 import Link from 'next/link';
-
+import Image from "next/image"
 export default function Navbar() {
     return (
         <nav className="top-0 w-full bg-white border-b border-gray-200 dark:bg-gray-900 start-0 dark:border-gray-600">
             <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
+                
                 <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="https://findlogovector.com/wp-content/uploads/2019/08/clima-com-logo-vector.png" className="h-8" alt="Clima App Logo"/>
-                    <span className="self-center text-2xl italic font-semibold whitespace-nowrap dark:text-white">Clima App</span>
+                    <Image src="/media/cloudy.png" alt="Descripción" width={50} height={30}/>
+                    <span className="self-center text-2xl italic font-semibold whitespace-nowrap dark:text-white">RiwiWeatherApp</span>
                 </Link>
                 <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
                     <button type="button" className="px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
