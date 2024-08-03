@@ -19,7 +19,7 @@ export default function Hero() {
                         <div className="w-full">
                             <h1 className="text-4xl font-bold lg:text-6xl">Find the <span className="text-blue-400">wheater</span> of your city location</h1>
                             <div className="w-20 h-2 my-4 bg-blue-400"></div>
-                            <p className="mb-10 text-xl">Welcome to your best wheather app friend, save, share, be notified.</p>
+                            <p className="mb-10 text-xl">Welcome to your best wheather <span className="text-blue-400">app</span> friend, save, <span className="text-blue-400">share</span>, be notified.</p>
                             <div className="flex gap-5">
                             <button className="px-4 py-2 text-xl font-medium text-white bg-blue-400 rounded shadow hover:bg-blue-300" onClick={()=>{window.location.href = "/login"}}>Login</button>
                             <button className="px-4 py-2 text-xl font-medium text-white bg-blue-400 rounded shadow hover:bg-blue-300" onClick={()=>{window.location.href = "/register"}}>Register</button>

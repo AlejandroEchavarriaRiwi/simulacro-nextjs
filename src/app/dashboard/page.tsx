@@ -1,14 +1,11 @@
 import SearchBar from "../../../components/searchbar";
-import WeatherPage from "../../../components/wheater/cardsweather";
 
-export default function MainWeatherPage(){
-    return(
-        
-        <><br />
-        <br />
-        <br />
-        <br />
-        <SearchBar/>
-        <WeatherPage/></>
+export default function MainWeatherPage() {
+    return (
+        <div className="flex items-center justify-center min-h-screen">
+            <div className="w-full max-w-lg"> {/* Cambié max-w-md a max-w-lg */}
+                <SearchBar /> {/* Añadí w-full para hacer la SearchBar ancha */}
+            </div>
+        </div>
     )
 }

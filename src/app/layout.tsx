@@ -18,8 +18,8 @@ export default function RootLayout({
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeOut(true)
-      setTimeout(() => setIsLoading(false), 500) // Espera a que termine la transición
-    }, 1000) // Ajusta este tiempo según tus necesidades
+      setTimeout(() => setIsLoading(false), 200) // Espera a que termine la transición
+    }, 100) // Ajusta este tiempo según tus necesidades
 
     return () => clearTimeout(timer)
   }, [])
