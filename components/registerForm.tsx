@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import { UserController } from "../controllers/user.controller";
+import InputAlert from "./alerts/successAlert";
 
 
 export function RegisterForm() {
@@ -16,11 +17,11 @@ export function RegisterForm() {
         try {
             const createResult = await userController.createUser({ username, password });
             if(createResult)
-            alert("usuario creado exitosamente")
+                await InputAlert('User succesfully created', 'success')
             localStorage.clear()
             window.location.href = '/login'
         } catch (error) {
-            alert("Error durante el registro");
+            await InputAlert('Error to create user', 'error')
         }
     };
 
