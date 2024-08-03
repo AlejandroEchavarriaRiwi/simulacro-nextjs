@@ -1,3 +1,4 @@
+import InputAlert from "../../components/alerts/successAlert";
 import Hero from "../../components/hero";
 import { LoginForm } from "../../components/loginForm";
 import Navbar from "../../components/navbar";

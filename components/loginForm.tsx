@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { UserController } from "../controllers/user.controller";
+import InputAlert from "./alerts/successAlert";
 
 
 export function LoginForm() {
@@ -19,14 +20,15 @@ export function LoginForm() {
         try {
             const loginResult = await userController.login({ username, password });
             if (loginResult && loginResult.token) {
-                alert('Login succesfully')
                 localStorage.setItem("token", loginResult.token);
-                window.location.href = '/dashboard'
+                await InputAlert('Login successful', 'success')
+                
+                window.location.href = '/dashboard';
             } else {
-                alert("User or password incorrect");
+                await InputAlert('User or password incorrect', 'error');
             }
         } catch (error) {
-            alert(`User or password incorrect`);
+            await InputAlert('User or password incorrect', 'error');
         }
     };
 
