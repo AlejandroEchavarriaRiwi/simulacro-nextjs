@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Navbar from '../../../components/navbar';
 import VideoWallpaper from '../../../components/videowallpaper';
+import ImageWallpaper from '../../../components/wallpaperimg';
 
 export default function DashboardLayout({
     children,
@@ -21,7 +22,7 @@ export default function DashboardLayout({
 
     return (
         <div className="relative min-h-screen">
-            <VideoWallpaper />
+            <ImageWallpaper />
             <main className="relative z-10">
                 <Navbar />
                 <div>
