@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { Inter } from "next/font/google"
-import Preloader from '../../components/preloader'
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -29,7 +28,6 @@ export default function RootLayout({
       <body className={inter.className}>
         {isLoading && (
           <div className={`transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
-            <Preloader />
           </div>
         )}
         {children}
