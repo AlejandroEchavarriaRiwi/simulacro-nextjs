@@ -1,5 +1,7 @@
+import NewCity from "../../../../components/wheater/newCity";
+
 export default function Your(){
     return(
-        <h1>your site</h1>
+        <NewCity />
     )
 }

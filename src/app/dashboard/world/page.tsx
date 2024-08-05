@@ -1,5 +1,7 @@
+import CityList from "../../../../components/wheater/showCities";
+
 export default function World(){
     return(
-        <h1>World Site</h1>
+        <CityList />
     )
 }
